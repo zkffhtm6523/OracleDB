@@ -10,3 +10,5 @@ drop index idx_student_age;
 
 
 --where절을 많이 안 쓴다. 그러면 굳이 index를 안 써도 됨
+
+select * from t_board;
