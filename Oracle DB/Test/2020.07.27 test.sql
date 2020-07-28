@@ -8,6 +8,7 @@ create table t_order(
     cus_no number(10),
     o_date date not null,
     o_price float(8) default 0,
+--    o_price number(8,1) default 0,
     foreign key(cus_no) references t_customer(cus_no)
 );
 commit;
@@ -45,3 +46,10 @@ select a.o_no,a.o_date,a.o_price,b.nm from t_order A join t_customer B on A.cus_
 select * from view_order_info;
 
 drop view view_order_info;
+
+create or replace view view_order_info
+as
+select A.o_no,A.o_date,A.o_price,b.nm,cus_no
+from t_order A
+inner join t_customer B
+using(cus_no);
