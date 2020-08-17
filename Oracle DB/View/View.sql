@@ -12,3 +12,5 @@ select * from view_boardlike_cnt;
 drop view view_boardlike_cnt;
 
 commit;
+
+select * from t_board;
