@@ -20,7 +20,7 @@ commit;
 select * from t_user;
 
 desc t_user_loginhistory;
-select * from t_user_loginhistory;
+select * from t_user_loginhistory order by r_dt;
 
 drop table t_user_loginhistory;
 drop sequence seq_userloginhistory;

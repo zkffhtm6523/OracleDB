@@ -4,8 +4,8 @@ commit;
 
 create table t_board4(
     i_board number primary key,
-    title varchar2(100) not null,
-    ctnt varchar2(2000) not null,
+    title nvarchar2(100) not null,
+    ctnt nvarchar2(2000) not null,
     hits number default 0,
     i_user number not null,
     r_dt date DEFAULT sysdate,
@@ -15,7 +15,3 @@ create table t_board4(
 commit;
 
 select * from t_user;
-insert into t_board4
-(i_board, title, ctnt, i_user)
-values
-(1, 😊, 🐱‍,5)
